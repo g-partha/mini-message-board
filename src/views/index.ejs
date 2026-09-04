@@ -1,7 +1,15 @@
 <html>
 
 <body>
-    <p>Hello world</p>
+      <div>Messages</div>
+<% messages.forEach(message => { %>
+   <div>
+      <div><%= message.message %> <a href="/message/<%= message.id %>">Open</a></div>
+    </div>
+  <%})%>
+  <div>
+    <a href='/new'>Add new message</a>
+  </div>
 </body>
 
 </html>
